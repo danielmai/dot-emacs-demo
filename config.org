@@ -131,3 +131,15 @@ at point as the default value for occur.
     :ensure t
     :bind (("C-x g" . magit-status)))
 #+END_SRC
+
+* Key customizations for Mac
+
+#+BEGIN_SRC emacs-lisp
+;; key bindings
+;; http://ergoemacs.org/emacs/emacs_hyper_super_keys.html
+(when (eq system-type 'darwin) ;; mac specific settings
+ (setq mac-command-modifier 'meta)
+ (setq mac-option-modifier 'super) ; make opt key do Super
+ (setq mac-control-modifier 'control) ; make Control key do Control
+ (setq ns-function-modifier 'hyper))  ; make Fn key do Hyper
+#+END_SRC
